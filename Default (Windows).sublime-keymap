@@ -1,0 +1,51 @@
+[
+    // 原有 F5/F6 配置
+    {
+        "keys": ["f5"],
+        "command": "repl_open",
+        "caption": "Python - RUN current file",
+        "id": "repl_python_run",
+        "args": {
+            "type": "subprocess",
+            "encoding": "utf8",
+            "cmd": ["python", "-u", "$file_basename"],
+            "cwd": "$file_path",
+            "syntax": "Packages/Python/Python.tmLanguage",
+            "external_id": "python",
+            "extend_env": {"PYTHONIOENCODING": "utf-8"}
+        }
+    },
+    {
+        "keys": ["f6"],
+        "command": "repl_open",
+        "caption": "Python",
+        "id": "repl_python",
+        "args": {
+            "type": "subprocess",
+            "encoding": "utf8",
+            "cmd": ["python", "-i", "-u"],
+            "cwd": "$file_path",
+            "syntax": "Packages/Python/Python.tmLanguage",
+            "external_id": "python",
+            "extend_env": {"PYTHONIOENCODING": "utf-8"}
+        }
+    },
+    
+    // Miku 查询面板快捷键
+    { 
+        "keys": ["f10"], 
+        "command": "query_key_binding",
+        "context": [
+            { "key": "num_selections", "operator": "equal", "operand": 1 },
+            { "key": "has_next_field", "operator": "equal", "operand": false },
+            { "key": "panel_visible", "operator": "equal", "operand": false }
+        ]
+    },
+
+    // Ctrl+Alt+N：看知乎热搜 (新闻模式)
+    { "keys": ["ctrl+alt+n"], "command": "miku_reader", "args": {"mode": "news"} },
+    
+    // Alt+Space（或者你喜欢的键）：读下一行小说 (小说模式)
+    { "keys": ["alt+space"], "command": "miku_reader", "args": {"mode": "novel"} }
+
+]
