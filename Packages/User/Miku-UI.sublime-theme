@@ -1,0 +1,36 @@
+[
+    // 侧边栏背景
+    {
+        "class": "sidebar_container",
+        "layer0.tint": "#1A1D1E",
+        "layer0.opacity": 1.0
+    },
+    // 选中的文件行高亮
+    {
+        "class": "sidebar_tree",
+        "row_padding": [8, 4],
+        "indent": 12
+    },
+    {
+        "class": "tree_row",
+        "attributes": ["selected"],
+        "layer0.tint": "rgba(57, 197, 187, 0.2)"
+    },
+    // 标签页（Tab）样式
+    {
+        "class": "tabset_control",
+        "layer0.tint": "#131516"
+    },
+    {
+        "class": "tab_control",
+        "attributes": ["selected"],
+        "layer0.tint": "#39C5BB",
+        "layer0.opacity": 0.5
+    },
+    // 状态栏
+    {
+        "class": "status_bar",
+        "layer0.tint": "#39C5BB",
+        "layer0.opacity": 0.1
+    }
+]

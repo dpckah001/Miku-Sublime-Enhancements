@@ -1,0 +1,30 @@
+{
+    "name": "Miku Theme",
+    "variables": {
+        "miku_teal": "#39C5BB",        // 初音绿（核心色）
+        "miku_pink": "#FF1694",        // 领结粉
+        "miku_dark": "#212121",        // 头发/衣服深灰
+        "miku_bg": "#1A1D1E",          // 背景
+        "miku_light_teal": "#64E3D7",   // 发光青
+        "white": "#F0F0F0"
+    },
+    "globals": {
+        "foreground": "var(white)",
+        "background": "var(miku_bg)",
+        "caret": "var(miku_teal)",
+        "line_highlight": "rgba(57, 197, 187, 0.15)",
+        "selection": "rgba(57, 197, 187, 0.35)",
+        "gutter_foreground": "rgba(57, 197, 187, 0.4)",
+        "guide": "rgba(57, 197, 187, 0.2)",
+        "active_guide": "var(miku_teal)"
+    },
+    "rules": [
+        { "scope": "keyword", "foreground": "var(miku_pink)", "font_style": "bold" },
+        { "scope": "string", "foreground": "var(miku_teal)" },
+        { "scope": "entity.name.function", "foreground": "var(miku_light_teal)", "font_style": "italic" },
+        { "scope": "variable.parameter", "foreground": "var(white)" },
+        { "scope": "comment", "foreground": "#5C6370", "font_style": "italic" },
+        { "scope": "constant.numeric", "foreground": "var(miku_pink)" },
+        { "scope": "storage.type", "foreground": "var(miku_teal)", "font_style": "bold" }
+    ]
+}
